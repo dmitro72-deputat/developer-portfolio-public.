@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Проєкт на SwiftUI та три браузерні інструменти для роботи з текстом, структурованими даними й шаблонами документів.">
+<meta name="theme-color" content="#07110f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Портфоліо розробника">
+<meta property="og:description" content="Проєкт на SwiftUI та три браузерні інструменти для роботи з текстом, структурованими даними й шаблонами документів.">
+<link rel="alternate" hreflang="en" href="./index.html">
+<link rel="alternate" hreflang="uk" href="./uk.html">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./logic.js"></script>
+<script defer src="./app.js"></script>
+<title>Портфоліо розробника</title>
+</head>
+<body>
+<a class="skip" href="#main">Перейти до вмісту</a>
+<header>
+<a class="brand" href="./uk.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span>Портфоліо розробника</a>
+<nav aria-label="Основна навігація">
+<a href="#project">Проєкт</a><a href="#tools">Інтерактивні інструменти</a>
+<a class="button" href="./index.html" hreflang="en" lang="en">English</a>
+</nav>
+</header>
+<main id="main">
+<div class="hero"><div class="inner hero-grid">
+<div><p class="eyebrow">Портфоліо розробки</p><h1>Інструменти для щоденних задач.</h1><p class="lead">Проєкт на SwiftUI та три браузерні інструменти для роботи з текстом, структурованими даними й шаблонами документів.</p>
+<a class="button primary" href="#tools">Спробувати інструменти</a></div>
+<div class="card hero-art" aria-hidden="true"><div class="art-title">Приклади обробки</div><pre>┌─ invoice.txt
+│  “  Field   Notes  ”
+└─ clean text
+
+input.csv   →   rows + columns
+template    →   document.txt</pre></div>
+</div></div>
+<section id="project" class="inner">
+<p class="eyebrow">Проєкт</p><div class="case-grid">
+<div><h2>DocuMind Smart Vision</h2><p class="lead">Проєкт для сканування та впорядкування документів на iOS, створений на Swift і SwiftUI.</p><span class="pill">Підготовлено до приймання на Mac та iPhone</span></div>
+<div class="card"><h3>Реалізовані можливості</h3><ul><li>Багатосторінкове сканування й локальне розпізнавання тексту через Apple Vision.</li><li>Локальна бібліотека з папками, перегляд PDF через PDFKit та імпорт PDF/DOCX.</li><li>Ручне знімання етикеток у Smart Scan 360° та звірка з локальним профілем алергенів.</li></ul></div>
+</div></section>
+<section id="services" class="inner"><h2>Технічні послуги</h2><div class="card"><ul><li>Очищення тексту та структурованих даних.</li><li>Перевірка CSV і JSON.</li><li>Автоматизація текстових документів за шаблонами.</li><li>Створення невеликих браузерних інструментів.</li></ul><p>Приклади можливостей наведено в інтерактивних демо нижче.</p></div></section>
+<section id="tools" class="inner">
+<p class="eyebrow">Робочі демо</p><h2>Інтерактивні інструменти</h2><p class="lead">Спробуйте зразок або вставте свої дані. Сторінка обробляє їх локально.</p>
+<div class="modes" role="group" aria-label="Інтерактивні інструменти">
+<button type="button" data-mode="text" aria-pressed="true">Очищення тексту</button>
+<button type="button" data-mode="data" aria-pressed="false">CSV та JSON</button>
+<button type="button" data-mode="doc" aria-pressed="false">Шаблони документів</button>
+</div>
+<div class="work-grid">
+<form class="card" id="tool">
+<h3 id="tool-title">Очищення тексту</h3><p class="meta" id="hint"></p>
+<div id="format-group" hidden><label for="format">Формат даних</label><select id="format"><option value="CSV">CSV — кома</option><option value="CSV_SEMI">CSV — крапка з комою</option><option value="TSV">TSV — табуляція</option><option>JSON</option></select></div>
+<label id="input-label" for="input">Вхідні дані</label>
+<textarea id="input" maxlength="200000" spellcheck="false" aria-describedby="hint"></textarea>
+<div id="values-group" hidden><label for="values">Значення (об’єкт JSON)</label><textarea id="values" maxlength="200000" spellcheck="false"></textarea></div>
+<div class="actions"><button class="primary" id="run">Виконати</button><button type="button" id="sample">Завантажити зразок</button></div>
+</form>
+<div class="card"><h3 id="result-label">Результат</h3><p class="status" id="status" role="status"></p>
+<pre class="output" id="result" tabindex="0" aria-labelledby="result-label"></pre>
+<div class="actions output-actions"><button type="button" id="copy" disabled>Копіювати</button><button type="button" id="download" disabled>Завантажити</button></div>
+</div></div>
+<noscript><p>Увімкніть JavaScript для роботи інструментів.</p></noscript>
+</section></main>
+<footer>Портфоліо розробника · Усі приклади використовують вигадані дані.</footer>
+</body></html>
