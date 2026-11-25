@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A SwiftUI project and three browser tools for working with text, structured data, and document templates.">
+<meta name="theme-color" content="#07110f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Developer Portfolio">
+<meta property="og:description" content="A SwiftUI project and three browser tools for working with text, structured data, and document templates.">
+<link rel="alternate" hreflang="en" href="./index.html">
+<link rel="alternate" hreflang="uk" href="./uk.html">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./logic.js"></script>
+<script defer src="./app.js"></script>
+<title>Developer Portfolio</title>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="brand" href="./index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span>Developer Portfolio</a>
+<nav aria-label="Main navigation">
+<a href="#project">Project</a><a href="#tools">Interactive tools</a>
+<a class="button" href="./uk.html" hreflang="uk" lang="uk">Українська</a>
+</nav>
+</header>
+<main id="main">
+<div class="hero"><div class="inner hero-grid">
+<div><p class="eyebrow">Software portfolio</p><h1>Tools for everyday workflows.</h1><p class="lead">A SwiftUI project and three browser tools for working with text, structured data, and document templates.</p>
+<a class="button primary" href="#tools">Try the tools</a></div>
+<div class="card hero-art" aria-hidden="true"><div class="art-title">Workflow examples</div><pre>┌─ invoice.txt
+│  “  Field   Notes  ”
+└─ clean text
+
+input.csv   →   rows + columns
+template    →   document.txt</pre></div>
+</div></div>
+<section id="project" class="inner">
+<p class="eyebrow">Project</p><div class="case-grid">
+<div><h2>DocuMind Smart Vision</h2><p class="lead">An iOS document-scanning and organization project built with Swift and SwiftUI.</p><span class="pill">Prepared for Mac and iPhone acceptance</span></div>
+<div class="card"><h3>Implemented features</h3><ul><li>Multi-page document scanning and local text recognition with Apple Vision.</li><li>A local library with folders, a PDFKit viewer, and PDF/DOCX import.</li><li>Manual label capture with Smart Scan 360° and matching against a local allergen profile.</li></ul></div>
+</div></section>
+<section id="services" class="inner"><h2>Technical services</h2><div class="card"><ul><li>Text and structured data cleanup.</li><li>CSV and JSON validation.</li><li>Text document template automation.</li><li>Small browser-based tools.</li></ul><p>Explore examples of these capabilities in the interactive demos below.</p></div></section>
+<section id="tools" class="inner">
+<p class="eyebrow">Live demos</p><h2>Interactive tools</h2><p class="lead">Try the sample data or paste your own. Processing runs locally in this page.</p>
+<div class="modes" role="group" aria-label="Interactive tools">
+<button type="button" data-mode="text" aria-pressed="true">Text cleanup</button>
+<button type="button" data-mode="data" aria-pressed="false">CSV and JSON</button>
+<button type="button" data-mode="doc" aria-pressed="false">Document templates</button>
+</div>
+<div class="work-grid">
+<form class="card" id="tool">
+<h3 id="tool-title">Text cleanup</h3><p class="meta" id="hint"></p>
+<div id="format-group" hidden><label for="format">Data format</label><select id="format"><option value="CSV">CSV — comma</option><option value="CSV_SEMI">CSV — semicolon</option><option value="TSV">TSV — tab</option><option>JSON</option></select></div>
+<label id="input-label" for="input">Input</label>
+<textarea id="input" maxlength="200000" spellcheck="false" aria-describedby="hint"></textarea>
+<div id="values-group" hidden><label for="values">Values (JSON object)</label><textarea id="values" maxlength="200000" spellcheck="false"></textarea></div>
+<div class="actions"><button class="primary" id="run">Run</button><button type="button" id="sample">Load example</button></div>
+</form>
+<div class="card"><h3 id="result-label">Result</h3><p class="status" id="status" role="status"></p>
+<pre class="output" id="result" tabindex="0" aria-labelledby="result-label"></pre>
+<div class="actions output-actions"><button type="button" id="copy" disabled>Copy</button><button type="button" id="download" disabled>Download</button></div>
+</div></div>
+<noscript><p>Enable JavaScript to run the interactive tools.</p></noscript>
+</section></main>
+<footer>Developer portfolio · All examples use fictional data.</footer>
+</body></html>
